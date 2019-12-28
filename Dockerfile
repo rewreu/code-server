@@ -22,7 +22,7 @@ RUN yarn \
 	&& rm -r /src/source
 
 # We deploy with ubuntu so that devs have a familiar environment.
-FROM ubuntu:18.04
+FROM nvidia/cuda:10.1-base-ubuntu18.04
 
 RUN apt-get update && apt-get install -y \
 	openssl \
